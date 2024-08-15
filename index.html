@@ -1,9 +1,82 @@
 <!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+  .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+    }
+
+  .popup h2 {
+      margin-top: 0;
+    }
+
+  .popup p {
+      margin-bottom: 20px;
+    }
+
+  .popup button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+  .popup button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+
+  <script>
+    // 模拟公告内容
+    var message = "这是一个重要的公告！";
+
+    // 创建弹窗
+    var popup = document.createElement('div');
+    popup.className = 'popup';
+
+    var h2 = document.createElement('h2');
+    h2.textContent = '公告';
+
+    var p = document.createElement('p');
+    p.textContent = message;
+
+    var button = document.createElement('button');
+    button.textContent = '我知道了';
+    button.addEventListener('click', function() {
+      popup.remove();
+    });
+
+    popup.appendChild(h2);
+    popup.appendChild(p);
+    popup.appendChild(button);
+
+    document.body.appendChild(popup);
+  </script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>置顶友链</title>
+    <title>欢乐工坊软件库-可投稿</title>
     <style>
         body {
             font-family: Arial, sans-serif;
